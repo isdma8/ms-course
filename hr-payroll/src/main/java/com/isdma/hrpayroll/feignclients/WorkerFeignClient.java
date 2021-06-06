@@ -8,9 +8,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.isdma.hrpayroll.entities.Worker;
 
+//Para usar o Feign temos de ter uma interface com as assinaturas das requisições que nós podemos fazer, neste caso feitas no worker
+
 
 @Component
-@FeignClient(name = "hr-worker", url = "localhost:8001", path = "/workers")
+@FeignClient(name = "hr-worker"/*, url = "localhost:8001"*/, path = "/workers")
 public interface WorkerFeignClient {
 	
 	
